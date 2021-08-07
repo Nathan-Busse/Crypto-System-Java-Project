@@ -1,0 +1,26 @@
+class WoodenBlockCipher
+{
+  public String encript(String message)
+  {
+	  char[] firstArray = secondArray[];
+	  char[] charArray = message.toCharArray();
+	  int noOfSpaces = countSpaces(charArray);
+	  int length = charArray.length - noOfSpaces;
+	  if(isOdd(length))
+	  {
+		  firstArray = new char[length/2 +1];
+		  secondArray = new char[length/2];
+	  }
+	  else
+	  {
+		  firstArray = new char[length/2];
+		  secondArray = new char[length/2];
+	  }
+
+
+   for(int i=0,j=0,k=1;i<((firstArray.length>secondArray.length)?firstArray.length:secondArray.length);j+=2,k+=2)
+    {
+	  if(charArray[j] != ' ')
+      firstArray[i] = charArray[j];
+      if(charArray[k] != ' ')
+      secondArray[i] = charArray[k];
